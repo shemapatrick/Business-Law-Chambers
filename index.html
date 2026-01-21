@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Law Chambers</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Sticky Top */
+        .page-top {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #0a1f44;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 5%;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 5%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo */
+        .logo {
+            font-weight: bold;
+            font-size: 22px;
+            color: #0a1f44;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0a1f44;
+            font-weight: 600;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 35px;
+            background: white;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-content a:hover {
+            background: #f2994a;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Button */
+        .contact-btn {
+            background: #28a745; /* Green */
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            background: url('image3.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 10%;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #0a1f44;
+            margin-bottom: 40px;
+        }
+
+        /* About Us Section */
+        .about-us-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light grey */
+        }
+
+        .about-us-box {
+            flex: 1 1 calc(33% - 20px); /* Flex with a minimum width of 33% */
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .about-us-box h3 {
+            text-align: center;
+            color: #0a1f44;
+            margin-bottom: 15px;
+        }
+
+        .about-us-box p {
+            text-align: justify; /* Ensures the text aligns properly */
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #dcdcdc; /* Light grey background */
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .footer-socials img {
+            width: 25px;
+            margin: 0 8px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .footer-socials img:hover {
+            opacity: 1;
+        }
+
+        /* Floating Social Buttons */
+        .float-btn {
+            position: fixed;
+            right: 25px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 300;
+            background: white;
+        }
+
+        .whatsapp {
+            bottom: 25px;
+        }
+
+        .linkedin {
+            bottom: 90px;
+            background: #0077b5;
+        }
+
+        .float-btn img {
+            width: 28px;
+            height: 28px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Page Top -->
+    <div class="page-top">
+        <div class="top-bar">
+            <div>📞 +250 788 305 873 | +250 734 363 123</div>
+            <div>📍 Martzalus House, Kigali</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Business Law Chambers Limited</div>
+
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Services ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#Legal Advisory">Legal Advisory</a>
+                        <a href="#Notary">Notary</a>
+                        <a href="#Mediation">Mediation</a>
+                        <a href="#Corporate Law">Corporate Law</a>
+                        <a href="#Real Estate">Real Estate</a>
+                    </div>
+                </li>
+                <li><a href="#Location">Location</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="contact-btn">Free Consultation</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Your Trusted Legal Partner</h1>
+            <p>Professional • Reliable • Experienced</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section fade-in">
+        <h2>About Us</h2>
+        <div class="about-us-container">
+            <div class="about-us-box">
+                <h3>Immigration & Document Assistance</h3>
+                <p>We assist foreign nationals in obtaining work and residency documents, ensuring full compliance with local regulations, and managing the timely renewal of your legal documents before they expire.</p>
+            </div>
+            <div class="about-us-box">
+                <h3>Real Estate & Hotel Advisory</h3>
+                <p>Our legal team provides expert advisory for businesses in the real estate and hospitality sectors, ensuring compliance with Rwandan commercial laws, property transactions, and hotel management regulations.</p>
+            </div>
+            <div class="about-us-box">
+                <h3>Notary Services</h3>
+                <p>We offer notary services to formalize legal documents such as contracts, deeds, and affidavits, ensuring they are legally valid and properly executed for official use in Rwanda.</p>
+            </div>
+            <div class="about-us-box">
+                <h3>Government Legal Services</h3>
+                <p>Our firm provides assistance with regulatory processes, government permits, licenses, and approvals, helping individuals and businesses navigate the complex legal requirements in Rwanda.</p>
+            </div>
+            <div class="about-us-box">
+                <h3>Our Commitment</h3>
+                <p>We are dedicated to delivering professional legal services to both individuals and businesses in Rwanda, ensuring compliance and success in all your legal endeavors within the Rwandan market.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn">
+            </a>
+            <a href="https://wa.me/250788305873" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+        </div>
+        <p>© 2026 Business Law Chambers Limited</p>
+    </footer>
+
+    <!-- Floating Social Buttons -->
+    <a href="https://wa.me/250788305873" target="_blank" class="float-btn whatsapp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <a href="https://www.linkedin.com" target="_blank" class="float-btn linkedin">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn">
+    </a>
+
+</body>
+</html>
